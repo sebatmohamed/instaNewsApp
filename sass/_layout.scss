@@ -1,0 +1,80 @@
+/*
+Layout: contains all the CSS that handles the layout,
+such as the container and any grid systems.
+*/
+
+body {
+    font-family: "Open Sans Light";
+    font-size: 16px;
+    color: #ffffff;
+  }
+header {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    @include tablet {
+      header {
+        flex-direction: row;
+      }
+      .stories {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .image {
+        width: 33%;
+      }
+    }
+  
+    @include desktop {
+      header {
+          flex-direction: row;
+          align-items: left;
+        }
+      .stories {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      .image {
+        width: 25%;
+      }
+    }
+  }
+  
+  .select-menu {
+    position: relative;
+    background: white;
+    color: black;
+  }
+  
+  p {
+    padding: 10px;
+  }
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  .stories {
+    display: flex;
+    flex-direction: column;
+  }
+  .image {
+    width: 100%;
+  }
+  footer {
+    color: #c2c2c2;
+    text-align: center;
+    background: black;
+    height: 5em;
+    padding-top: 1em;
+  }
+  
+  span {
+    text-transform: uppercase;
+  }
+
+
+
+
+

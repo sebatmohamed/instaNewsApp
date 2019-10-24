@@ -23,9 +23,9 @@ $(function() {
 
         
           // try to append images as background in css
-          // $("#top-stories").append(` <img class="image" src="${$mediaArray[0]}"/>`);
+          $("#top-stories").append(` <img class="image" src="${$mediaArray[0]}"/>`);
 
-          $("#top-stories").after('<div></div>').css('background-image', 'url("' + imageUrl + '")');
+          // $("#top-stories").after('<div></div>').css('background-image', 'url("' + imageUrl + '")');
 
           return index < 11;
         });
