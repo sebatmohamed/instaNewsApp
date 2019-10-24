@@ -20,37 +20,30 @@ time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
-}
+  display: block; }
 
 body {
-  line-height: 1;
-}
+  line-height: 1; }
 
 ol, ul {
-  list-style: none;
-}
+  list-style: none; }
 
 blockquote, q {
-  quotes: none;
-}
+  quotes: none; }
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: "";
-  content: none;
-}
+  content: '';
+  content: none; }
 
 table {
   border-collapse: collapse;
-  border-spacing: 0;
-}
+  border-spacing: 0; }
 
 /*
 Base: contained within this file are all your resets, variables, 
@@ -61,29 +54,29 @@ mixins, and any utility classes.
   src: url("fonts/OpenSans-Light.eot");
   src: url("fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Light.woff2") format("woff2"), url("fonts/OpenSans-Light.woff") format("woff"), url("fonts/OpenSans-Light.ttf") format("truetype"), url("fonts/OpenSans-Light.svg#OpenSans-Light") format("svg");
   font-weight: 300;
-  font-style: normal;
-}
+  font-style: normal; }
+
 @font-face {
   font-family: "Open Sans Bold";
   src: url("fonts/OpenSans-Bold.eot");
   src: url("fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Bold.woff2") format("woff2"), url("fonts/OpenSans-Bold.woff") format("woff"), url("fonts/OpenSans-Bold.ttf") format("truetype"), url("fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
   font-weight: bold;
-  font-style: normal;
-}
+  font-style: normal; }
+
 @font-face {
   font-family: "Open Sans Light Italic";
   src: url("fonts/OpenSansLight-Italic.eot");
   src: url("fonts/OpenSansLight-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSansLight-Italic.woff2") format("woff2"), url("fonts/OpenSansLight-Italic.woff") format("woff"), url("fonts/OpenSansLight-Italic.ttf") format("truetype"), url("fonts/OpenSansLight-Italic.svg#OpenSansLight-Italic") format("svg");
   font-weight: 300;
-  font-style: italic;
-}
+  font-style: italic; }
+
 @font-face {
   font-family: "Open Sans Bold Italic";
   src: url("fonts/OpenSans-BoldItalic.eot");
   src: url("fonts/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("fonts/OpenSans-BoldItalic.woff") format("woff"), url("fonts/OpenSans-BoldItalic.ttf") format("truetype"), url("fonts/OpenSans-BoldItalic.svg#OpenSans-BoldItalic") format("svg");
   font-weight: bold;
-  font-style: italic;
-}
+  font-style: italic; }
+
 /*
 Layout: contains all the CSS that handles the layout,
 such as the container and any grid systems.
@@ -91,82 +84,90 @@ such as the container and any grid systems.
 body {
   font-family: "Open Sans Light";
   font-size: 16px;
-  color: #ffffff;
-}
+  color: #ffffff; }
 
 .container {
   background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 15em;
-}
-.container img {
-  width: 33%;
-  padding-bottom: 1em;
-}
-@media (min-width: 600px) {
-  .container {
-    flex-direction: row;
-  }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 15em; }
   .container img {
-    width: 6em;
-  }
-  .container .stories {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
-@media (min-width: 1240px) {
-  .container {
-    flex-direction: row;
-    align-items: left;
-  }
-  .container .stories {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-}
+    width: 33%;
+    padding-bottom: 1em; }
+  @media (min-width: 600px) {
+    .container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      .container img {
+        width: 6em; }
+      .container .stories {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
+  @media (min-width: 1240px) {
+    .container {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-box-align: left;
+          -ms-flex-align: left;
+              align-items: left; }
+      .container .stories {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; } }
 
 .section {
-  text-align: center;
-}
-.section p {
-  padding-bottom: 1em;
-}
+  text-align: center; }
+  .section p {
+    padding-bottom: 1em; }
 
 .select-menu {
   position: relative;
   background: white;
-  color: black;
-}
+  color: black; }
 
 .stories {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-}
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column; }
 
 .image {
-  width: 100%;
-}
+  width: 100%; }
 
 footer {
   color: #c2c2c2;
   text-align: center;
   background: black;
   height: 4.5em;
-  padding-top: 2em;
-}
-footer p {
-  font-size: 14px;
-}
-footer span {
-  text-transform: uppercase;
-}
+  padding-top: 2em; }
+  footer p {
+    font-size: 14px; }
+  footer span {
+    text-transform: uppercase; }
 
 /*
 Components: anything reusable such as
 buttons, navbars, cards etc.
 */
-
-/*# sourceMappingURL=style.css.map */
