@@ -7,13 +7,14 @@ body {
   font-family: "Open Sans Light";
   font-size: 16px;
   color: #ffffff;
+  background: black;
 }
 
 .container {
-  background: black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 15em;
 
   img {
@@ -26,20 +27,11 @@ body {
     img {
       width: 6em;
     }
-    .stories {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
   }
 
   @include desktop {
     flex-direction: row;
     align-items: left;
-
-    .stories {
-      flex-direction: row;
-      flex-wrap: wrap;
-    }
   }
 }
 
@@ -57,9 +49,16 @@ body {
   color: black;
 }
 
-.stories {
-  display: flex;
-  flex-direction: column;
+.stories{
+  position: relative;
+  .abstract {
+    position: absolute;
+    color: white;
+    z-index: 9999;
+    bottom: 0.1em;
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+    text-shadow: 0.3px 0.3px white;
+  }
 }
 
 .image {
@@ -79,6 +78,7 @@ footer {
   background: black;
   height: 4.5em;
   padding-top: 2em;
+  text-shadow: 0.5px 0.5px #c2c2c2;
 
   p {
     font-size: 14px;

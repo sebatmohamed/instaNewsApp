@@ -8,11 +8,15 @@ $(function() {
       ).done(function(data) {
         $.each(data.results, function(index, value) {
           const $media = value.multimedia;
-          
-          if($media.length !== 0){
-            $("#top-stories").append(` <img class="image" src="${$media[4].url}"/>`)
-            return index < 11
-          } 
+          const $abstract = value.abstract;
+
+          if ($media.length !== 0) {
+            $("#top-stories").append(` <div class="stories">
+                                        <img class="image" src="${$media[4].url}"/>
+                                        <p class="abstract">${$abstract}</p>
+                                      </div>`);
+            return index < 11;
+          }
         });
       });
     });
