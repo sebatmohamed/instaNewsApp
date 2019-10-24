@@ -78,7 +78,10 @@ p {
 .stories {
     display: flex;
     flex-direction: column;
-    color: blue;
+}
+
+.image {
+    width: 100%;
 }
 footer {
     color: #c2c2c2;
@@ -88,4 +91,24 @@ footer {
 
 span {
     text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 600px) {
+    .stories {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+
+
 }
