@@ -87,6 +87,8 @@ footer {
     color: #c2c2c2;
     text-align: center;
     background: black;
+    height: 5em;
+    padding-top: 1em;
 }
 
 span {
@@ -105,7 +107,25 @@ span {
 @media (min-width: 600px) {
     .stories {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: wrap;    
+    }
+    .image {
+        width: 33%;
+    }
+
+
+
+
+}
+
+
+@media (min-width: 1240px) {
+    .stories {
+        flex-direction: row;
+        flex-wrap: wrap;    
+    }
+    .image {
+        width: 25%;
     }
 
 
