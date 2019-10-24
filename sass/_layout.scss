@@ -4,77 +4,88 @@ such as the container and any grid systems.
 */
 
 body {
-    font-family: "Open Sans Light";
-    font-size: 16px;
-    color: #ffffff;
+  font-family: "Open Sans Light";
+  font-size: 16px;
+  color: #ffffff;
+  background: black;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 15em;
+  margin-top: 2em;
+
+  img {
+    width: 33%;
+    padding-bottom: 1em;
   }
-header {
-    background: black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
-    @include tablet {
-      header {
-        flex-direction: row;
-      }
-      .stories {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      .image {
-        width: 33%;
-      }
+
+  @include tablet {
+    flex-direction: row;
+    img {
+      width: 6em;
     }
-  
-    @include desktop {
-      header {
-          flex-direction: row;
-          align-items: left;
-        }
-      .stories {
-        flex-direction: row;
-        flex-wrap: wrap;
-      }
-      .image {
-        width: 25%;
-      }
+    .stories {
+      flex-direction: row;
+      flex-wrap: wrap;
     }
   }
-  
-  .select-menu {
-    position: relative;
-    background: white;
-    color: black;
+
+  @include desktop {
+    flex-direction: row;
+    align-items: left;
+
+    .stories {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
-  
+}
+
+.section {
+  text-align: center;
+
   p {
-    padding: 10px;
+    padding-bottom: 1em;
   }
-  .container {
-    text-align: center;
-    padding: 20px;
+}
+
+.select-menu {
+  position: relative;
+  background: white;
+  color: black;
+}
+
+.stories {
+  display: flex;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  // @include tablet {
+  //   width: 33%;
+  // }
+
+  // @include desktop {
+  //   width: 25%;
+  // }
+}
+
+footer {
+  color: #c2c2c2;
+  text-align: center;
+  background: black;
+  height: 4.5em;
+  padding-top: 2em;
+
+  p {
+    font-size: 14px;
   }
-  .stories {
-    display: flex;
-    flex-direction: column;
-  }
-  .image {
-    width: 100%;
-  }
-  footer {
-    color: #c2c2c2;
-    text-align: center;
-    background: black;
-    height: 5em;
-    padding-top: 1em;
-  }
-  
+
   span {
     text-transform: uppercase;
   }
-
-
-
-
-
+}
