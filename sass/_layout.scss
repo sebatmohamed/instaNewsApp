@@ -3,8 +3,8 @@ Layout: contains all the CSS that handles the layout,
 such as the container and any grid systems.
 */
 
-body {
-  font-family: "Open Sans Light";
+body, html {
+  font-family: "OpenSans-Light";
   font-size: 16px;
   color: #ffffff;
   background: black;
@@ -22,34 +22,47 @@ body {
     padding-bottom: 1em;
   }
 
+  .section {
+    text-align: center;
+
+    p {
+      padding-bottom: 1em;
+      font-size: 12px;
+    }
+  }
+
+  .select-menu {
+    position: relative;
+    background: white;
+    color: black;
+    padding: 0px 4px;
+  }
+
   @include tablet {
     flex-direction: row;
+    justify-content: flex-start;
     img {
-      width: 6em;
+      width: 9em;
     }
   }
 
   @include desktop {
     flex-direction: row;
-    align-items: left;
+    justify-content: flex-start;
+
+    img {
+      width: 9em;
+      padding-top: 4em;
+    }
+
+    .section {
+      text-align: start;
+      padding-top: 4em;
+    }
   }
 }
 
-.section {
-  text-align: center;
-
-  p {
-    padding-bottom: 1em;
-  }
-}
-
-.select-menu {
-  position: relative;
-  background: white;
-  color: black;
-}
-
-.stories{
+.stories {
   position: relative;
   .abstract {
     position: absolute;
@@ -59,22 +72,13 @@ body {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
     text-shadow: 0.3px 0.3px white;
   }
-}
-
-.image {
-  width: 100%;
-  // @include tablet {
-  //   width: 33%;
-  // }
-
-  // @include desktop {
-  //   width: 25%;
-  // }
+  .image {
+    width: 100%;
+  }
 }
 
 footer {
   color: #c2c2c2;
-  text-align: center;
   background: black;
   height: 4.5em;
   padding-top: 2em;
@@ -82,9 +86,20 @@ footer {
 
   p {
     font-size: 14px;
+    text-align: center;
   }
 
   span {
     text-transform: uppercase;
+  }
+
+  @include tablet {
+    p {
+      text-align: start;
+    }
+  }
+
+  @include desktop {
+    
   }
 }

@@ -11,7 +11,7 @@ const terser = require("gulp-terser"),
 
 gulp.task("sass", function() {
   return gulp
-    .src("./sass/style.scss", {sourcemaps: true})
+    .src("./sass/style.scss", { sourcemaps: true })
     .pipe(sourcemaps.init())
     .pipe(sass())
     .pipe(autoprefixer())
@@ -22,7 +22,7 @@ gulp.task("sass", function() {
     .pipe(gulp.dest("./build/css"));
 });
 
-gulp.task("default", function() {
+gulp.task("scripts", function() {
   return gulp
     .src("./js/*.js")
     .pipe(terser())
@@ -30,7 +30,21 @@ gulp.task("default", function() {
     .pipe(gulp.dest("./build/js"));
 });
 
-// gulp.task("default", function(done) {
-//   console.log("hello it is I, Gulp");
-//   done();
-// });
+gulp.task("browser-sync", function(done) {
+  browserSync.init({
+    server: {
+      baseDir: "./"
+    }
+  });
+  gulp
+    .watch(["build/css/*.css", "build/js/*.js"])
+    .on("change", browserSync.reload);
+});
+
+gulp.task("watch", function(done) {
+  gulp.watch("js/*.js", gulp.series("scripts"));
+  gulp.watch("sass/*.scss", gulp.series("sass"));
+  done();
+});
+
+gulp.task("default", gulp.parallel("browser-sync", "watch"));

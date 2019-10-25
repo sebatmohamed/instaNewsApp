@@ -50,44 +50,23 @@ Base: contained within this file are all your resets, variables,
 mixins, and any utility classes.
 */
 @font-face {
-  font-family: "Open Sans Light";
-  src: url("fonts/OpenSans-Light.eot");
-  src: url("fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Light.woff2") format("woff2"), url("fonts/OpenSans-Light.woff") format("woff"), url("fonts/OpenSans-Light.ttf") format("truetype"), url("fonts/OpenSans-Light.svg#OpenSans-Light") format("svg");
+  font-family: "OpenSans-Light";
+  src: url("../fonts/OpenSans-Light.eot");
+  src: url("../fonts/OpenSans-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-Light.svg#OpenSans-Light") format("svg");
   font-weight: 300;
   font-style: normal; }
-
-@font-face {
-  font-family: "Open Sans Bold";
-  src: url("fonts/OpenSans-Bold.eot");
-  src: url("fonts/OpenSans-Bold.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-Bold.woff2") format("woff2"), url("fonts/OpenSans-Bold.woff") format("woff"), url("fonts/OpenSans-Bold.ttf") format("truetype"), url("fonts/OpenSans-Bold.svg#OpenSans-Bold") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
-@font-face {
-  font-family: "Open Sans Light Italic";
-  src: url("fonts/OpenSansLight-Italic.eot");
-  src: url("fonts/OpenSansLight-Italic.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSansLight-Italic.woff2") format("woff2"), url("fonts/OpenSansLight-Italic.woff") format("woff"), url("fonts/OpenSansLight-Italic.ttf") format("truetype"), url("fonts/OpenSansLight-Italic.svg#OpenSansLight-Italic") format("svg");
-  font-weight: 300;
-  font-style: italic; }
-
-@font-face {
-  font-family: "Open Sans Bold Italic";
-  src: url("fonts/OpenSans-BoldItalic.eot");
-  src: url("fonts/OpenSans-BoldItalic.eot?#iefix") format("embedded-opentype"), url("fonts/OpenSans-BoldItalic.woff2") format("woff2"), url("fonts/OpenSans-BoldItalic.woff") format("woff"), url("fonts/OpenSans-BoldItalic.ttf") format("truetype"), url("fonts/OpenSans-BoldItalic.svg#OpenSans-BoldItalic") format("svg");
-  font-weight: bold;
-  font-style: italic; }
 
 /*
 Layout: contains all the CSS that handles the layout,
 such as the container and any grid systems.
 */
-body {
-  font-family: "Open Sans Light";
+body, html {
+  font-family: "OpenSans-Light";
   font-size: 16px;
-  color: #ffffff; }
+  color: #ffffff;
+  background: black; }
 
 .container {
-  background: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,74 +77,77 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 15em; }
   .container img {
     width: 33%;
     padding-bottom: 1em; }
+  .container .section {
+    text-align: center; }
+    .container .section p {
+      padding-bottom: 1em;
+      font-size: 12px; }
+  .container .select-menu {
+    position: relative;
+    background: white;
+    color: black;
+    padding: 0px 4px; }
   @media (min-width: 600px) {
     .container {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
-              flex-direction: row; }
+              flex-direction: row;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
       .container img {
-        width: 6em; }
-      .container .stories {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
+        width: 9em; } }
   @media (min-width: 1240px) {
     .container {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      -webkit-box-align: left;
-          -ms-flex-align: left;
-              align-items: left; }
-      .container .stories {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; } }
-
-.section {
-  text-align: center; }
-  .section p {
-    padding-bottom: 1em; }
-
-.select-menu {
-  position: relative;
-  background: white;
-  color: black; }
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
+      .container img {
+        width: 9em;
+        padding-top: 4em; }
+      .container .section {
+        text-align: start;
+        padding-top: 4em; } }
 
 .stories {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
-
-.image {
-  width: 100%; }
+  position: relative; }
+  .stories .abstract {
+    position: absolute;
+    color: white;
+    z-index: 9999;
+    bottom: 0.1em;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75)));
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+    text-shadow: 0.3px 0.3px white; }
+  .stories .image {
+    width: 100%; }
 
 footer {
   color: #c2c2c2;
-  text-align: center;
   background: black;
   height: 4.5em;
-  padding-top: 2em; }
+  padding-top: 2em;
+  text-shadow: 0.5px 0.5px #c2c2c2; }
   footer p {
-    font-size: 14px; }
+    font-size: 14px;
+    text-align: center; }
   footer span {
     text-transform: uppercase; }
+  @media (min-width: 600px) {
+    footer p {
+      text-align: start; } }
 
 /*
 Components: anything reusable such as
