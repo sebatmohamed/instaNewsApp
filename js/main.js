@@ -11,13 +11,16 @@ $(function() {
           const $abstract = value.abstract;
 
           if ($media.length !== 0) {
-            $("#top-stories").append(` <div class="stories">
+            $("#top-stories").append(` <figure class="stories">
                                         <img class="image" src="${$media[4].url}"/>
-                                        <p class="abstract">${$abstract}</p>
-                                      </div>`);
-            return index < 11;
+                                        <figcaption class="abstract">${$abstract}</figcaption>
+                                      </figure>`);
+            return index < 12;
           }
         });
+
+        
+
       });
     });
   });

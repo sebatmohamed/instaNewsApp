@@ -121,6 +121,18 @@ body, html {
         text-align: start;
         padding-top: 4em; } }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  width: 100%; }
+  @media (min-width: 600px) {
+    .grid {
+      grid-template-columns: 5fr 5fr 5fr; } }
+  @media (min-width: 1240px) {
+    .grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr; } }
+
 .stories {
   position: relative; }
   .stories .abstract {
@@ -132,7 +144,8 @@ body, html {
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
     text-shadow: 0.3px 0.3px white; }
   .stories .image {
-    width: 100%; }
+    width: 100%;
+    height: 100%; }
 
 footer {
   color: #c2c2c2;
