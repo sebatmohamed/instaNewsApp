@@ -15,52 +15,64 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 2.5em;
 
   .logo {
-    width: 55%;
+    width: 30%;
     margin-bottom: 1em;
-    margin-top: 11em;
+    margin-top: 1em;
   }
 
-  .section {
-    text-align: center;
-
-    p {
-      padding-bottom: 1.25em;
-      font-size: 16px;
-      text-shadow: 0.25px 0.25px;
-    }
+  p {
+    padding-bottom: 1.25em;
+    font-size: 14px;
+    text-shadow: 0.25px 0.25px;
   }
 
   .select-menu {
     position: relative;
     background: white;
     color: black;
-    padding: 2px 8px;
-    font-size: 16px;
+    border-radius: 2.5px;
     border-width: 0px;
+    font-size: 14px;
+    padding-left: 0.25em;
+    padding-right: 0.5em;
   }
 
   @include tablet {
     flex-direction: row;
     justify-content: flex-start;
-    img {
-      width: 9em;
+    margin-left: 12.5em;
+    margin-bottom: 1em;
+
+    .logo {
+      width: 10%;
+      padding-right: 4.5em;
+    }
+
+    p {
+      padding-bottom: 1em;
+    }
+
+    .select-menu {
+      padding-right: 0em;
     }
   }
 
   @include desktop {
     flex-direction: row;
     justify-content: flex-start;
+    margin-left: 2.5em;
 
-    img {
-      width: 9em;
+    .logo {
+      width: 5%;
       padding-top: 4em;
+      padding-right: 6em;
     }
 
     .section {
       text-align: start;
-      padding-top: 4em;
     }
   }
 }
@@ -68,46 +80,53 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  height: 75vh;
   width: 100%;
 
+  // .loading {
+  //   display: block;
+  //   width: 50%;
+  //   margin-right: auto;
+  //   margin-left: auto;
+  // }
+
+  figure {
+    position: relative;
+    width: 100%;
+
+    .image {
+      width: 100%;
+      object-fit: contain;
+    }
+
+    .abstract {
+      position: absolute;
+      color: white;
+      z-index: 9999;
+      bottom: 0.1em;
+      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+      text-shadow: 0.3px 0.3px white;
+    }
+  }
+
   @include tablet {
-  grid-template-columns: 5fr 5fr 5fr;
+    grid-template-columns: 5fr 5fr 5fr;
   }
 
   @include desktop {
-  grid-template-columns: 1fr 1fr 1fr 1fr; 
-  }
-}
-
-figure {
-  position: relative;
-  width: 100%;
-
-  img {
-    width: 100%;
-    object-fit: contain;
-  }
-
-  figcaption {
-    position: absolute;
-    color: white;
-    z-index: 9999;
-    bottom: 0.1em;
-    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
-    text-shadow: 0.3px 0.3px white;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 footer {
   color: #c2c2c2;
   background: black;
-  height: 4.5em;
   text-shadow: 0.33px 0.33px #c2c2c2;
 
   p {
     font-size: 16px;
     text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2.5em;
   }
 
   span {
@@ -115,12 +134,13 @@ footer {
   }
 
   @include tablet {
-    p {
-      text-align: start;
-    }
+ 
   }
 
   @include desktop {
-    
+    p {
+      text-align: start;
+      margin-left: 2em;
+    }
   }
 }
