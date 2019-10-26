@@ -99,6 +99,11 @@ body {
     }
 
     .abstract {
+      display: none;
+    }
+
+    &:hover .abstract {
+      display: block;
       position: absolute;
       color: white;
       z-index: 9999;
@@ -134,7 +139,6 @@ footer {
   }
 
   @include tablet {
- 
   }
 
   @include desktop {

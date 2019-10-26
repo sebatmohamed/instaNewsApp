@@ -27,3 +27,8 @@ mixins, and any utility classes.
     @content;
   }
 }
+
+@mixin hide-text {
+  overflow: hidden;
+  display: block;
+}
