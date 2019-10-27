@@ -136,14 +136,15 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  width: 100%; }
+  grid-template-rows: 1fr; }
   .grid figure {
     position: relative;
-    width: 100%; }
+    text-align: left; }
     .grid figure .image {
       width: 100%;
       -o-object-fit: cover;
-         object-fit: cover; }
+         object-fit: cover;
+      min-height: 100%; }
     .grid figure .abstract {
       display: none; }
     .grid figure:hover .abstract {
@@ -158,10 +159,12 @@ body {
       text-shadow: 0.3px 0.3px white; }
   @media (min-width: 600px) {
     .grid {
-      grid-template-columns: 5fr 5fr 5fr; } }
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, 1fr); } }
   @media (min-width: 1240px) {
     .grid {
-      grid-template-columns: 1fr 1fr 1fr 1fr; } }
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 1fr); } }
 
 footer {
   color: #c2c2c2;

@@ -23,7 +23,7 @@ $(function() {
 
             if ($media.length !== 0 && counter >= 0) {
               counter++;
-              $("#top-stories").append(` <figure class="stories">
+              $("#top-stories").append(`<figure class="stories">
                                         <a target="_blank" href="${$articlelink}">
                                         <img class="image" src="${$media[4].url}"/></a>
                                         <figcaption class="abstract">${$abstract}</figcaption>
@@ -33,9 +33,7 @@ $(function() {
           });
         })
         .fail(function(data) {
-          $("#top-stories").append(
-            "<p>Sorry there was a problem, please try again</p>"
-          );
+          $("#top-stories").append("<p>Sorry there was a problem, please try again</p>");
         });
     });
   });

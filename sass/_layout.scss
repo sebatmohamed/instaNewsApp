@@ -80,15 +80,16 @@ body {
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  width: 100%;
+  grid-template-rows: 1fr;
 
   figure {
     position: relative;
-    width: 100%;
+    text-align: left;
 
     .image {
       width: 100%;
       object-fit: cover;
+      min-height: 100%;
     }
 
     .abstract {
@@ -97,21 +98,17 @@ body {
 
     &:hover .abstract {
       @include hide-text;
-      position: absolute;
-      color: white;
-      z-index: 9999;
-      bottom: 0.1em;
-      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
-      text-shadow: 0.3px 0.3px white;
     }
   }
 
   @include tablet {
-    grid-template-columns: 5fr 5fr 5fr;
-  }
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
 
   @include desktop {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 
@@ -121,7 +118,6 @@ footer {
   text-shadow: 0.33px 0.33px #c2c2c2;
   height: 5em;
   margin-top: 2em;
-
 
   p {
     font-size: 16px;
