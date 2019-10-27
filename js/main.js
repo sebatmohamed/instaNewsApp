@@ -14,11 +14,13 @@ $(function() {
         $.each(data.results, function(index, value) {
           const $media = value.multimedia;
           const $abstract = value.abstract;
+          const $articlelink = value.url
 
           if ($media.length !== 0 && counter >= 0) {
             counter++;
             $("#top-stories").append(` <figure class="stories">
-                                        <img class="image" src="${$media[4].url}"/>
+                                        <a target="_blank" href="${$articlelink}">
+                                        <img class="image" src="${$media[4].url}"/></a>
                                         <figcaption class="abstract">${$abstract}</figcaption>
                                       </figure>`);
             return counter < 12;
