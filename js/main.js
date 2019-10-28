@@ -1,9 +1,13 @@
 $(function() {
   $(function() {
     $("#sections").on("change", function() {
+      $("#footer").css("position", "relative")
+
       $(".loader-gif").css("display", "block");
 
       $("#top-stories").empty();
+
+      $("#error").empty()
 
       const section = $("#sections").val();
 
@@ -33,7 +37,9 @@ $(function() {
           });
         })
         .fail(function(data) {
-          $("#top-stories").append("<p class='error-message'>Sorry there was a problem, please try again</p>");
+          setTimeout((error) => {
+            $("#error").append('<h1 class="error-message">Sorry there was a problem, please try again</h1>')
+          }, 6000);
         });
     });
   });

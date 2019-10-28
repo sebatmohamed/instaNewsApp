@@ -4,81 +4,49 @@ such as the container and any grid systems.
 */
 
 body {
+  background: black;
   font-family: "OpenSans-Light";
   font-size: 16px;
-  color: #ffffff;
-  background: black;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 4em;
+  text-align: center;
 
   .logo {
-    width: 35%;
-    padding-bottom: 1.25em;
+    width: 10em;
+    padding-bottom: 1em;
     padding-top: 2em;
   }
 
-  p {
-    padding-bottom: 1.25em;
-    font-size: 14px;
-    text-shadow: 0.25px 0.25px;
-  }
-
-  .select-menu {
-    position: relative;
-    background: white;
-    color: black;
-    border-radius: 2.5px;
-    border-width: 0px;
-    font-size: 16px;
-    padding-left: 0.25em;
-  }
-
-  @include tablet {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-left: 10.5em;
-    padding-bottom: 1em;
-
-    .logo {
-      width: 25%;
-      padding-right: 2em;
-    }
-
+  .section {
     p {
+      color: #ffffff;
       padding-bottom: 1em;
-      font-size: 15px;
+      text-shadow: 0.25px 0.25px;
     }
 
     .select-menu {
-      padding-right: 0em;
-      padding-left: 0em;
+      background-color: #ffffff;
+      border-width: 0px;
+      font-size: 16px;
     }
   }
 
-  @include desktop {
+  @include tablet {
+    display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding-left: 3.5em;
+  }
 
-    .logo {
-      width: 18%;
-      padding-top: 4em;
-      padding-right: 4.25em;
-    }
-
-    p {
-      font-size: 18px;
-    }
-
-    .section {
-      text-align: start;
-    }
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
   }
 }
 
@@ -86,6 +54,8 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
+  min-height: 100%;
+  position: relative;
 
   figure {
     position: relative;
@@ -110,7 +80,7 @@ body {
   @include tablet {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-}
+  }
 
   @include desktop {
     grid-template-columns: repeat(4, 1fr);
@@ -119,15 +89,17 @@ body {
 }
 
 footer {
-  color: #c2c2c2;
-  background: black;
-  text-shadow: 0.33px 0.33px #c2c2c2;
-  height: 4.5em;
-  padding-top: 2em;
+  height: 7em;
+  // padding-top: 2em;
+  position: absolute;
+  bottom: 0em;
+  width: 100%;
 
   p {
-    font-size: 16px;
+    color: #c2c2c2;
     text-align: center;
+    text-shadow: 0.33px 0.33px #c2c2c2;
+    padding-top: 2em;
   }
 
   span {
@@ -135,12 +107,12 @@ footer {
   }
 
   @include tablet {
+    position: absolute;
+    bottom: 0em;
   }
 
   @include desktop {
-    p {
-      text-align: start;
-      margin-left: 2em;
-    }
+    position: absolute;
+    bottom: 0em;
   }
 }

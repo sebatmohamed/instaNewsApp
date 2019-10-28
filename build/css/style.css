@@ -61,12 +61,9 @@ Layout: contains all the CSS that handles the layout,
 such as the container and any grid systems.
 */
 body {
+  background: black;
   font-family: "OpenSans-Light";
   font-size: 16px;
-  color: #ffffff;
-  background: black; }
-
-.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,72 +71,55 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 4em; }
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  text-align: center; }
   .container .logo {
-    width: 35%;
-    padding-bottom: 1.25em;
+    width: 10em;
+    padding-bottom: 1em;
     padding-top: 2em; }
-  .container p {
-    padding-bottom: 1.25em;
-    font-size: 14px;
+  .container .section p {
+    color: #ffffff;
+    padding-bottom: 1em;
     text-shadow: 0.25px 0.25px; }
-  .container .select-menu {
-    position: relative;
-    background: white;
-    color: black;
-    border-radius: 2.5px;
+  .container .section .select-menu {
+    background-color: #ffffff;
     border-width: 0px;
-    font-size: 16px;
-    padding-left: 0.25em; }
+    font-size: 16px; }
   @media (min-width: 600px) {
     .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
-              justify-content: flex-start;
-      padding-left: 10.5em;
-      padding-bottom: 1em; }
-      .container .logo {
-        width: 25%;
-        padding-right: 2em; }
-      .container p {
-        padding-bottom: 1em;
-        font-size: 15px; }
-      .container .select-menu {
-        padding-right: 0em;
-        padding-left: 0em; } }
+              justify-content: flex-start; } }
   @media (min-width: 1240px) {
     .container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
-              justify-content: flex-start;
-      padding-left: 3.5em; }
-      .container .logo {
-        width: 18%;
-        padding-top: 4em;
-        padding-right: 4.25em; }
-      .container p {
-        font-size: 18px; }
-      .container .section {
-        text-align: start; } }
+              justify-content: flex-start; } }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr; }
+  grid-template-rows: 1fr;
+  min-height: 100%;
+  position: relative; }
   .grid figure {
     position: relative;
     text-align: left;
@@ -172,20 +152,25 @@ body {
       grid-template-rows: repeat(3, 1fr); } }
 
 footer {
-  color: #c2c2c2;
-  background: black;
-  text-shadow: 0.33px 0.33px #c2c2c2;
-  height: 4.5em;
-  padding-top: 2em; }
+  height: 7em;
+  position: absolute;
+  bottom: 0em;
+  width: 100%; }
   footer p {
-    font-size: 16px;
-    text-align: center; }
+    color: #c2c2c2;
+    text-align: center;
+    text-shadow: 0.33px 0.33px #c2c2c2;
+    padding-top: 2em; }
   footer span {
     text-transform: uppercase; }
+  @media (min-width: 600px) {
+    footer {
+      position: absolute;
+      bottom: 0em; } }
   @media (min-width: 1240px) {
-    footer p {
-      text-align: start;
-      margin-left: 2em; } }
+    footer {
+      position: absolute;
+      bottom: 0em; } }
 
 /*
 Components: anything reusable such as
@@ -195,8 +180,12 @@ buttons, navbars, cards etc.
   display: none;
   margin-right: auto;
   margin-left: auto;
-  width: 12.5%; }
+  width: 12.5%;
+  margin-top: 30px; }
 
 .error-message {
   text-align: center;
-  padding-top: 2em; }
+  padding-left: 1em;
+  padding-top: 2em;
+  color: white;
+  font-size: 30px; }
