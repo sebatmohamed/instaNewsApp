@@ -34,7 +34,9 @@ mixins, and any utility classes.
   position: absolute;
   color: white;
   z-index: 9999;
-  bottom: 0.1em;
-  background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
+  bottom: 0em;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   text-shadow: 0.3px 0.3px white;
+  line-height: 25px;
+  padding: 10px;
 }

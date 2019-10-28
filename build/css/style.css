@@ -153,10 +153,12 @@ body {
       position: absolute;
       color: white;
       z-index: 9999;
-      bottom: 0.1em;
-      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.75)), to(rgba(0, 0, 0, 0.75)));
-      background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75));
-      text-shadow: 0.3px 0.3px white; }
+      bottom: 0em;
+      background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+      text-shadow: 0.3px 0.3px white;
+      line-height: 25px;
+      padding: 10px; }
   @media (min-width: 600px) {
     .grid {
       grid-template-columns: repeat(3, 1fr);
