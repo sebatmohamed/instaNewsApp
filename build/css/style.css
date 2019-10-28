@@ -106,15 +106,17 @@ body {
       -webkit-box-pack: start;
           -ms-flex-pack: start;
               justify-content: flex-start;
-      padding-left: 12.5em;
+      padding-left: 10.5em;
       padding-bottom: 1em; }
       .container .logo {
-        width: 10%;
-        padding-right: 4.5em; }
+        width: 25%;
+        padding-right: 2em; }
       .container p {
-        padding-bottom: 1em; }
+        padding-bottom: 1em;
+        font-size: 15px; }
       .container .select-menu {
-        padding-right: 0em; } }
+        padding-right: 0em;
+        padding-left: 0em; } }
   @media (min-width: 1240px) {
     .container {
       -webkit-box-orient: horizontal;
