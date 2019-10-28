@@ -29,7 +29,6 @@ mixins, and any utility classes.
 }
 
 @mixin hide-text {
-  overflow: hidden;
   display: block;
   position: absolute;
   color: white;

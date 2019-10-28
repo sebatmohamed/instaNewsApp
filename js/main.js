@@ -25,15 +25,15 @@ $(function() {
               counter++;
               $("#top-stories").append(`<figure class="stories">
                                         <a target="_blank" href="${$articlelink}">
-                                        <img class="image" src="${$media[4].url}"/></a>
-                                        <figcaption class="abstract">${$abstract}</figcaption>
+                                        <img class="image" src="${$media[4].url}"/>
+                                        <figcaption class="abstract">${$abstract}</figcaption></a>
                                       </figure>`);
               return counter < 12;
             }
           });
         })
         .fail(function(data) {
-          $("#top-stories").append("<p>Sorry there was a problem, please try again</p>");
+          $("#top-stories").append("<p class='error-message'>Sorry there was a problem, please try again</p>");
         });
     });
   });
