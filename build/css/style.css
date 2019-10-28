@@ -80,11 +80,11 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 2.5em; }
+  padding-bottom: 3.5em; }
   .container .logo {
-    width: 30%;
-    margin-bottom: 1em;
-    margin-top: 1em; }
+    width: 35%;
+    padding-bottom: 1.25em;
+    padding-top: 2em; }
   .container p {
     padding-bottom: 1.25em;
     font-size: 14px;
@@ -172,8 +172,8 @@ footer {
   color: #c2c2c2;
   background: black;
   text-shadow: 0.33px 0.33px #c2c2c2;
-  height: 5em;
-  margin-top: 2em; }
+  height: 4.5em;
+  padding-top: 2em; }
   footer p {
     font-size: 16px;
     text-align: center; }
