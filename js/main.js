@@ -1,15 +1,14 @@
 $(function() {
   $(function() {
     $("#sections").on("change", function() {
-      $("#footer").css("position", "relative")
 
       $(".loader-gif").css("display", "block");
-
-      $(".container").addClass("move-mobile")
 
       $("#top-stories").empty();
 
       $("#error").empty()
+
+      $(".container").addClass("move-mobile");
 
       const section = $("#sections").val();
 
@@ -20,7 +19,7 @@ $(function() {
       )
 
         .done(function(data) {
-          $(".loader-gif").hide();
+          $(".loader-gif").fadeOut(1250);
 
           $.each(data.results, function(index, value) {
             const $media = value.multimedia;
@@ -29,11 +28,15 @@ $(function() {
 
             if ($media.length !== 0 && counter >= 0) {
               counter++;
-              $("#top-stories").append(`<figure class="stories">
+
+              setTimeout(() => {
+                 $("#top-stories").append(`<figure class="stories">
                                         <a target="_blank" href="${$articlelink}">
                                         <img class="image" src="${$media[4].url}"/>
                                         <figcaption class="abstract">${$abstract}</figcaption></a>
                                       </figure>`);
+              }, 1500);
+             
               return counter < 12;
             }
           });

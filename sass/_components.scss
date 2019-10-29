@@ -5,9 +5,16 @@ buttons, navbars, cards etc.
 
 .loader-gif {
   display: none;
-  margin-right: auto;
-  margin-left: auto;
-  width: 12.5%;
+  width: 25%;
+  margin: auto;
+
+  @include tablet {
+    width: 15%;
+  }
+
+  @include desktop {
+    width: 10%
+  }
 }
 
 .error-message {
@@ -21,17 +28,51 @@ buttons, navbars, cards etc.
 
 @keyframes move-mobile {
   from {
-    transform: translateY(0%) scale(1);
-    height: 80%;
+    transform: translateY(0px) scale(1);
+    height: 100vh;
 
   }
   to {
-    transform: translateY(-10%) scale(0.5);
-    height: 25%;
+    transform: translateY(-15px) scale(0.5);
+    height: 25vh;
   }
 }
 
 .move-mobile {
-  animation: move-mobile 1s ease-in-out;
+  animation: move-mobile 1s;
   animation-fill-mode: forwards;
 }
+
+// @keyframes move-tablet {
+//   from {
+//     transform: translateY(0px) scale(1);
+//     height: 100vh;
+
+//   }
+//   to {
+//     transform: translateY(-10px) scale(0.5);
+//     height: 25vh;
+//   }
+// }
+
+// .move-tablet {
+//   animation: move-mobile 1s;
+//   animation-fill-mode: forwards;
+// }
+
+// @keyframes move-desktop {
+//   from {
+//     transform: translateY(0px) scale(1);
+//     height: 100vh;
+
+//   }
+//   to {
+//     transform: translate(-325px, -10px) scale(0.5);
+//     height: 25vh;
+//   }
+// }
+
+// .move-desktop {
+//   animation: move-mobile 1s;
+//   animation-fill-mode: forwards;
+// }
