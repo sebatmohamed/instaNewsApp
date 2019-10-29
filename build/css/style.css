@@ -60,7 +60,8 @@ mixins, and any utility classes.
 Layout: contains all the CSS that handles the layout,
 such as the container and any grid systems.
 */
-html, body {
+html,
+body {
   background: black;
   font-family: "OpenSans-Light";
   font-size: 16px;
@@ -84,13 +85,13 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  height: 85%;
-  margin-bottom: 15%;
+  height: 80%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  position: relative; }
   .container .logo {
-    width: 50%;
+    width: 45%;
     padding-bottom: 1em;
     padding-top: 2em; }
   .container .options p {
@@ -113,7 +114,13 @@ html, body {
               justify-content: center;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; } }
+              align-items: center;
+      padding-right: 125px; }
+      .container .options {
+        text-align: left;
+        padding-left: 10px; }
+      .container .logo {
+        width: 90%; } }
   @media (min-width: 1240px) {
     .container {
       -webkit-box-orient: horizontal;
@@ -125,7 +132,11 @@ html, body {
               justify-content: flex-start;
       -webkit-box-align: center;
           -ms-flex-align: center;
-              align-items: center; } }
+              align-items: center; }
+      .container .options {
+        padding-left: 80px; }
+      .container .logo {
+        width: 90%; } }
 
 .grid {
   display: grid;
@@ -152,7 +163,8 @@ html, body {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
       text-shadow: 0.3px 0.3px white;
       padding: 10px;
-      line-height: 25px; }
+      line-height: 25px;
+      font-size: 16px; }
   @media (min-width: 600px) {
     .grid {
       grid-template-columns: repeat(3, 1fr);
@@ -163,28 +175,45 @@ html, body {
       grid-template-rows: repeat(3, 1fr); } }
 
 footer {
-  position: absolute;
   bottom: 0;
-  height: 15%;
-  width: 100%; }
+  height: 20%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative; }
   footer p {
     color: #c2c2c2;
-    text-align: center;
     text-shadow: 0.33px 0.33px #c2c2c2;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
     padding-top: 5%; }
   footer span {
     text-transform: uppercase; }
   @media (min-width: 600px) {
     footer {
-      position: absolute;
-      bottom: 0em; } }
-  @media (min-width: 1240px) {
-    footer {
-      position: absolute;
       bottom: 0em; }
       footer p {
-        text-align: start; } }
+        padding-top: 3%;
+        padding-bottom: 4%; } }
+  @media (min-width: 1240px) {
+    footer {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      bottom: 0em; }
+      footer p {
+        padding-top: 2%;
+        padding-bottom: 3%; } }
 
 /*
 Components: anything reusable such as
@@ -201,4 +230,30 @@ buttons, navbars, cards etc.
   padding-left: 1em;
   padding-top: 2em;
   color: white;
-  font-size: 30px; }
+  font-size: 20px; }
+
+@-webkit-keyframes move-mobile {
+  from {
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
+    height: 80%; }
+  to {
+    -webkit-transform: translateY(-10%) scale(0.5);
+            transform: translateY(-10%) scale(0.5);
+    height: 25%; } }
+
+@keyframes move-mobile {
+  from {
+    -webkit-transform: translateY(0%) scale(1);
+            transform: translateY(0%) scale(1);
+    height: 80%; }
+  to {
+    -webkit-transform: translateY(-10%) scale(0.5);
+            transform: translateY(-10%) scale(0.5);
+    height: 25%; } }
+
+.move-mobile {
+  -webkit-animation: move-mobile 1s ease-in-out;
+          animation: move-mobile 1s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards; }

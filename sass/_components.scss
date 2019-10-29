@@ -15,5 +15,23 @@ buttons, navbars, cards etc.
   padding-left: 1em;
   padding-top: 2em;
   color: white;
-  font-size: 30px;
+  font-size: 20px;
+}
+
+
+@keyframes move-mobile {
+  from {
+    transform: translateY(0%) scale(1);
+    height: 80%;
+
+  }
+  to {
+    transform: translateY(-10%) scale(0.5);
+    height: 25%;
+  }
+}
+
+.move-mobile {
+  animation: move-mobile 1s ease-in-out;
+  animation-fill-mode: forwards;
 }

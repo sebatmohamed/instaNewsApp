@@ -5,6 +5,8 @@ $(function() {
 
       $(".loader-gif").css("display", "block");
 
+      $(".container").addClass("move-mobile")
+
       $("#top-stories").empty();
 
       $("#error").empty()

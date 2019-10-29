@@ -3,7 +3,8 @@ Layout: contains all the CSS that handles the layout,
 such as the container and any grid systems.
 */
 
-html, body {
+html,
+body {
   background: black;
   font-family: "OpenSans-Light";
   font-size: 16px;
@@ -14,21 +15,23 @@ html, body {
   padding: 0;
 }
 
+
 .container {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   text-align: center;
-  height: 85%;
-  margin-bottom: 15%;
+  height: 80%;
   justify-content: center;
+  position: relative;
 
   .logo {
-    width: 50%;
+    width: 45%;
     padding-bottom: 1em;
     padding-top: 2em;
   }
 
   .options {
+
     p {
       color: #ffffff;
       padding-bottom: 1em;
@@ -47,15 +50,33 @@ html, body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    padding-right: 125px;
 
+    .options {
+      text-align: left;
+      padding-left: 10px;
+    }
+
+    .logo {
+      width: 90%;
+    }
   }
 
   @include desktop {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+
+    .options {
+      padding-left: 80px;
+    }
+
+    .logo {
+      width: 90%;
+    }
   }
 }
+
 
 .grid {
   display: grid;
@@ -94,16 +115,19 @@ html, body {
 }
 
 footer {
-  position: absolute;
   bottom: 0;
-  height: 15%;
+  height: 20%;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 
   p {
     color: #c2c2c2;
-    text-align: center;
     text-shadow: 0.33px 0.33px #c2c2c2;
-    padding-bottom: 5%;
+    padding-bottom: 10%;
     padding-top: 5%;
   }
 
@@ -112,16 +136,22 @@ footer {
   }
 
   @include tablet {
-    position: absolute;
-    bottom: 0em;
-  }
-
-  @include desktop {
-    position: absolute;
+    // position: absolute;
     bottom: 0em;
 
     p {
-      text-align: start;
+      padding-top: 3%;
+      padding-bottom: 4%;
+    }
+  }
+
+  @include desktop {
+    justify-content: flex-start;
+    // position: absolute;
+    bottom: 0em;
+    p {
+      padding-top: 2%;
+      padding-bottom: 3%;
     }
   }
 }
