@@ -60,7 +60,7 @@ mixins, and any utility classes.
 Layout: contains all the CSS that handles the layout,
 such as the container and any grid systems.
 */
-body {
+html, body {
   background: black;
   font-family: "OpenSans-Light";
   font-size: 16px;
@@ -71,55 +71,66 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   padding: 0; }
 
 .container {
-  text-align: center; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  height: 85%;
+  margin-bottom: 15%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .container .logo {
-    width: 10em;
+    width: 50%;
     padding-bottom: 1em;
     padding-top: 2em; }
-  .container .section p {
+  .container .options p {
     color: #ffffff;
     padding-bottom: 1em;
     text-shadow: 0.25px 0.25px; }
-  .container .section .select-menu {
+  .container .options .select-menu {
     background-color: #ffffff;
     border-width: 0px;
-    font-size: 16px; }
+    font-size: 16px;
+    padding: 2px 6px; }
   @media (min-width: 600px) {
     .container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      -webkit-box-pack: start;
-          -ms-flex-pack: start;
-              justify-content: flex-start; } }
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
   @media (min-width: 1240px) {
     .container {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
       -webkit-box-pack: start;
           -ms-flex-pack: start;
-              justify-content: flex-start; } }
+              justify-content: flex-start;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; } }
 
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  min-height: 100%;
-  position: relative; }
+  grid-template-rows: 1fr; }
   .grid figure {
     position: relative;
     text-align: left;
@@ -140,8 +151,8 @@ body {
       background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
       text-shadow: 0.3px 0.3px white;
-      line-height: 25px;
-      padding: 10px; }
+      padding: 10px;
+      line-height: 25px; }
   @media (min-width: 600px) {
     .grid {
       grid-template-columns: repeat(3, 1fr);
@@ -152,15 +163,16 @@ body {
       grid-template-rows: repeat(3, 1fr); } }
 
 footer {
-  height: 7em;
   position: absolute;
-  bottom: 0em;
+  bottom: 0;
+  height: 15%;
   width: 100%; }
   footer p {
     color: #c2c2c2;
     text-align: center;
     text-shadow: 0.33px 0.33px #c2c2c2;
-    padding-top: 2em; }
+    padding-bottom: 5%;
+    padding-top: 5%; }
   footer span {
     text-transform: uppercase; }
   @media (min-width: 600px) {
@@ -170,7 +182,9 @@ footer {
   @media (min-width: 1240px) {
     footer {
       position: absolute;
-      bottom: 0em; } }
+      bottom: 0em; }
+      footer p {
+        text-align: start; } }
 
 /*
 Components: anything reusable such as
@@ -180,8 +194,7 @@ buttons, navbars, cards etc.
   display: none;
   margin-right: auto;
   margin-left: auto;
-  width: 12.5%;
-  margin-top: 30px; }
+  width: 12.5%; }
 
 .error-message {
   text-align: center;
