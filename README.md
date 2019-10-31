@@ -2,6 +2,8 @@
 
 A responsive web application that fetches the top 12 stories using the New York Times API
 
+![alt text](https://github.com/sebatmohamed/instaNewsApp/blob/master/tablet-initial.png)
+
 ## Setup
 
 Installation of a couple packages are required to run this game. Ensure you have [Node.js](https://nodejs.org/en/) installed first. Download the project before running the commands listed below:
