@@ -2,7 +2,7 @@
 
 A responsive web application that fetches the top 12 stories using the New York Times API
 
-![alt text](https://github.com/sebatmohamed/instaNewsApp/blob/master/tablet-initial.png)
+![alt text](https://github.com/sebatmohamed/instaNewsApp/blob/master/mobile-initial.png)
 
 ## Setup
 
