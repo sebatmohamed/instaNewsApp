@@ -10,6 +10,7 @@ $(function() {
 
       $(".container").addClass("move-mobile");
 
+
       const section = $("#sections").val();
 
       let counter = 0;

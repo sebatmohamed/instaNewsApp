@@ -34,7 +34,7 @@ buttons, navbars, cards etc.
   }
   to {
     transform: translateY(-15px) scale(0.5);
-    height: 25vh;
+    height: 30vh;
   }
 }
 
@@ -51,7 +51,7 @@ buttons, navbars, cards etc.
 //   }
 //   to {
 //     transform: translateY(-10px) scale(0.5);
-//     height: 25vh;
+//     height: 20vh;
 //   }
 // }
 
@@ -68,11 +68,13 @@ buttons, navbars, cards etc.
 //   }
 //   to {
 //     transform: translate(-325px, -10px) scale(0.5);
-//     height: 25vh;
+//     height: 10vh;
 //   }
 // }
 
 // .move-desktop {
 //   animation: move-mobile 1s;
 //   animation-fill-mode: forwards;
+//   justify-content: flex-start;
+//   // width: 20vw;
 // }
