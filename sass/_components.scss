@@ -61,21 +61,24 @@ buttons, navbars, cards etc.
   justify-content: space-evenly;
 }
 
-// @keyframes move-desktop {
-//   from {
-//     transform: translateY(0px) scale(1);
-//     height: 100vh;
+@keyframes move-desktop {
+  from {
+    transform: translateY(0px) scale(1);
+    height: 100vh;
 
-//   }
-//   to {
-//     transform: translate(-325px, -10px) scale(0.5);
-//     height: 10vh;
-//   }
-// }
+  }
+  to {
+    transform: translateX(-350px) scale(0.5);
+    height: 12vh;
+  }
+}
 
-// .move-desktop {
-//   animation: move-mobile 1s;
-//   animation-fill-mode: forwards;
-//   justify-content: flex-start;
-//   // width: 20vw;
-// }
+.move-desktop {
+  animation: move-desktop 1s;
+  animation-fill-mode: forwards;
+  justify-content: flex-start;
+
+  .options {
+    padding-left: 150px;
+  }
+}

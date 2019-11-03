@@ -10,9 +10,12 @@ $(function() {
 
       $("header").addClass("move-mobile");
       $(".container").addClass("move-mobile");
-      
-      $("header").addClass("move-tablet");
-      $(".container").addClass("move-tablet");
+
+      // $("header").addClass("move-tablet");
+      // $(".container").addClass("move-tablet");
+
+      // $("header").addClass("move-desktop");
+      // $(".container").addClass("move-desktop");
 
 
       const section = $("#sections").val();

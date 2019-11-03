@@ -134,7 +134,7 @@ body {
       .container .logo {
         padding-left: 25px; }
       .container .options {
-        padding-left: 75px; } }
+        padding-left: 40px; } }
 
 .grid {
   display: grid;
@@ -288,3 +288,34 @@ buttons, navbars, cards etc.
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly; }
+
+@-webkit-keyframes move-desktop {
+  from {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+    height: 100vh; }
+  to {
+    -webkit-transform: translateX(-350px) scale(0.5);
+            transform: translateX(-350px) scale(0.5);
+    height: 12vh; } }
+
+@keyframes move-desktop {
+  from {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+    height: 100vh; }
+  to {
+    -webkit-transform: translateX(-350px) scale(0.5);
+            transform: translateX(-350px) scale(0.5);
+    height: 12vh; } }
+
+.move-desktop {
+  -webkit-animation: move-desktop 1s;
+          animation: move-desktop 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+  .move-desktop .options {
+    padding-left: 150px; }
