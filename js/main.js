@@ -8,6 +8,7 @@ $(function() {
 
       $("#error").empty()
 
+      $("header").addClass("move-mobile");
       $(".container").addClass("move-mobile");
 
 

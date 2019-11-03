@@ -242,9 +242,9 @@ buttons, navbars, cards etc.
             transform: translateY(0px) scale(1);
     height: 100vh; }
   to {
-    -webkit-transform: translateY(-15px) scale(0.5);
-            transform: translateY(-15px) scale(0.5);
-    height: 30vh; } }
+    -webkit-transform: translateY(-10px) scale(0.65);
+            transform: translateY(-10px) scale(0.65);
+    height: 25vh; } }
 
 @keyframes move-mobile {
   from {
@@ -252,9 +252,9 @@ buttons, navbars, cards etc.
             transform: translateY(0px) scale(1);
     height: 100vh; }
   to {
-    -webkit-transform: translateY(-15px) scale(0.5);
-            transform: translateY(-15px) scale(0.5);
-    height: 30vh; } }
+    -webkit-transform: translateY(-10px) scale(0.65);
+            transform: translateY(-10px) scale(0.65);
+    height: 25vh; } }
 
 .move-mobile {
   -webkit-animation: move-mobile 1s;
