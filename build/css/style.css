@@ -71,6 +71,33 @@ body {
   margin: 0;
   padding: 0; }
 
+.move-header {
+  -webkit-animation: move-mobile 1s;
+          animation: move-mobile 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly; }
+  @media (min-width: 600px) {
+    .move-header {
+      -webkit-animation: move-tablet 1s;
+              animation: move-tablet 1s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly; } }
+  @media (min-width: 1240px) {
+    .move-header {
+      -webkit-animation: move-desktop 1s;
+              animation: move-desktop 1s;
+      -webkit-animation-fill-mode: forwards;
+              animation-fill-mode: forwards;
+      -webkit-box-pack: space-evenly;
+          -ms-flex-pack: space-evenly;
+              justify-content: space-evenly; } }
+
 .container {
   display: -webkit-box;
   display: -ms-flexbox;

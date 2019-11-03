@@ -8,15 +8,8 @@ $(function() {
 
       $("#error").empty()
 
-      $("header").addClass("move-mobile");
-      $(".container").addClass("move-mobile");
-
-      // $("header").addClass("move-tablet");
-      // $(".container").addClass("move-tablet");
-
-      // $("header").addClass("move-desktop");
-      // $(".container").addClass("move-desktop");
-
+      $("header").addClass("move-header");
+      $(".container").addClass("move-header");
 
       const section = $("#sections").val();
 

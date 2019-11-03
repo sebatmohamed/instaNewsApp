@@ -15,6 +15,24 @@ body {
   padding: 0;
 }
 
+.move-header {
+  animation: move-mobile 1s;
+  animation-fill-mode: forwards;
+  justify-content: space-evenly;
+
+  @include tablet {
+    animation: move-tablet 1s;
+    animation-fill-mode: forwards;
+    justify-content: space-evenly;
+  }
+
+  @include desktop {
+    animation: move-desktop 1s;
+    animation-fill-mode: forwards;
+    justify-content: space-evenly;
+  }
+}
+
 .container {
   display: flex;
   flex-direction: column;
