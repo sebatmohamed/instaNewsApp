@@ -10,6 +10,9 @@ $(function() {
 
       $("header").addClass("move-mobile");
       $(".container").addClass("move-mobile");
+      
+      $("header").addClass("move-tablet");
+      $(".container").addClass("move-tablet");
 
 
       const section = $("#sections").val();

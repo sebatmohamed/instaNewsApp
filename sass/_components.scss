@@ -43,22 +43,23 @@ buttons, navbars, cards etc.
   animation-fill-mode: forwards;
 }
 
-// @keyframes move-tablet {
-//   from {
-//     transform: translateY(0px) scale(1);
-//     height: 100vh;
+@keyframes move-tablet {
+  from {
+    transform: translateY(0px) scale(1);
+    height: 100vh;
 
-//   }
-//   to {
-//     transform: translateY(-10px) scale(0.5);
-//     height: 20vh;
-//   }
-// }
+  }
+  to {
+    transform: translateX(-80px) scale(0.5);
+    height: 15vh;
+  }
+}
 
-// .move-tablet {
-//   animation: move-mobile 1s;
-//   animation-fill-mode: forwards;
-// }
+.move-tablet {
+  animation: move-tablet 1s;
+  animation-fill-mode: forwards;
+  justify-content: space-evenly;
+}
 
 // @keyframes move-desktop {
 //   from {

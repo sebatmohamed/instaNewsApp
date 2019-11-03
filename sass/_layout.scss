@@ -56,7 +56,7 @@ body {
 
     .options {
       text-align: left;
-      padding-left: 50px;
+      padding-left: 20px;
     }
   }
 
@@ -132,7 +132,6 @@ footer {
   }
 
   @include tablet {
-    bottom: 0em;
 
     p {
       padding-top: 3%;

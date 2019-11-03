@@ -118,7 +118,7 @@ body {
         width: 220px; }
       .container .options {
         text-align: left;
-        padding-left: 50px; } }
+        padding-left: 20px; } }
   @media (min-width: 1240px) {
     .container {
       -webkit-box-orient: horizontal;
@@ -197,11 +197,9 @@ footer {
   footer span {
     text-transform: uppercase; }
   @media (min-width: 600px) {
-    footer {
-      bottom: 0em; }
-      footer p {
-        padding-top: 3%;
-        padding-bottom: 4%; } }
+    footer p {
+      padding-top: 3%;
+      padding-bottom: 4%; } }
   @media (min-width: 1240px) {
     footer {
       -webkit-box-pack: start;
@@ -261,3 +259,32 @@ buttons, navbars, cards etc.
           animation: move-mobile 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards; }
+
+@-webkit-keyframes move-tablet {
+  from {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+    height: 100vh; }
+  to {
+    -webkit-transform: translateX(-80px) scale(0.5);
+            transform: translateX(-80px) scale(0.5);
+    height: 15vh; } }
+
+@keyframes move-tablet {
+  from {
+    -webkit-transform: translateY(0px) scale(1);
+            transform: translateY(0px) scale(1);
+    height: 100vh; }
+  to {
+    -webkit-transform: translateX(-80px) scale(0.5);
+            transform: translateX(-80px) scale(0.5);
+    height: 15vh; } }
+
+.move-tablet {
+  -webkit-animation: move-tablet 1s;
+          animation: move-tablet 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly; }
