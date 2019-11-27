@@ -16,7 +16,7 @@ $(function() {
       let counter = 0;
 
       $.getJSON(
-        `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=GcbW6tsU7sr1adidcqfTOzJOuNt1kwBv`
+        `https://api.nytimes.com/svc/topstories/v2/${section}.json?api-key=my-key`
       )
 
         .done(function(data) {

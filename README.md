@@ -18,6 +18,21 @@ After you have downloaded the project, navigate to your project directory and op
 
 Run gulp. You can access your project at http://localhost:3000.
 
+## NY Times API Key
+
+Create an account to sign in and get a personalized API key from the [NY Times Developer website](https://developer.nytimes.com/apis).
+
+In your main.js file when making a request to the API to grab the top stories, replace the placeholder text ```my key``` with your personalized API.
+
+Example call:
+
+```javascript
+$.getJSON("https://api.nytimes.com/svc/topstories/v2/science.json?api-key=my-key")
+.done(function(data) {
+    //enter code here to use data
+})
+```
+
 #### Technologies Used
 
 - HTML5
